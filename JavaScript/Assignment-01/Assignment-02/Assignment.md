@@ -316,3 +316,282 @@ Answer:10:(c):-
 <img width="1080" height="769" alt="image" src="https://github.com/user-attachments/assets/54d0e131-98e8-4e8b-a939-2f7df4ff92ce" />
 ---
 ---
+---
+
+### Part H] - Non-Primitive Data Types Basic Creation & Usage (4 Questions)
+
+**1. Create an Object**  
+Create an object named `student` with the following properties:
+- `name` → `"Riya"`
+- `age` → `18`
+- `isEnrolled` → `true`  
+
+Print the entire object and then print each property individually.
+
+**2. Work with Arrays**  
+Create two arrays:
+- `scores` containing only numbers: `85, 92, 78, 90`
+- `mixedData` containing different types: a number, a string, a boolean, and `null`  
+
+Print both arrays. Also print the first and last element of the `scores` array using index.
+
+**3. Declare and Call a Function**  
+Write a function named `calculateArea` that takes two parameters (`length` and `width`) and returns the area of a rectangle.  
+Call the function twice with different values and print the results.
+
+**4. Check Types with `typeof`**  
+Create variables of the following types and print both the value and its type using `typeof`:
+- A number  
+- A string  
+- A boolean  
+- `null`  
+- An object  
+- An array  
+- A function  
+
+Observe and note any surprising results (especially with `null` and arrays).
+
+---
+
+### Part I] - Naming Rules & Best Practices (3 Questions)
+
+**5. Valid vs Invalid Variable Names**  
+Identify which of the following variable names are **valid** and which are **invalid**. For invalid ones, explain why.
+
+```javascript
+let userName;
+let 2ndPlace;
+let _privateData;
+let $price;
+let my-age;
+let function;
+let totalCount;
+let const;
+```
+
+**6. Apply Best Practices**  
+Rewrite the following poorly written code using best practices (`const`/`let`, meaningful names, camelCase, UPPERCASE for constants):
+
+```javascript
+let x = 10;
+let y = 5;
+let a = x * y;
+let b = 100;
+```
+
+**7. Declaration & Assignment**  
+Write code that demonstrates:
+- Declaring a variable without assigning a value, then assigning a value later  
+- Declaring and assigning a value in one step  
+- Creating a constant that cannot be changed  
+
+Print all variables.
+
+---
+
+### Part J] - Prediction & Fixing (3 Questions)
+
+**8. Predict the Output**  
+Without running the code, predict what each `console.log` will print. Explain your reasoning (especially for `typeof`).
+
+```javascript
+let person = { name: "Amit", age: 22 };
+let colors = ["red", "green", "blue"];
+function sayHi() {
+  return "Hi!";
+}
+let empty = null;
+
+console.log(typeof person);
+console.log(typeof colors);
+console.log(typeof sayHi);
+console.log(typeof empty);
+console.log(person.name);
+console.log(colors[1]);
+console.log(sayHi());
+```
+
+**9. Fix the Program**  
+The following code has multiple errors related to objects, arrays, functions, naming rules, and best practices. Fix it so that it runs correctly.
+
+```javascript
+let 1student = { name: "Neha", Age: 19 }
+let scores = 90, 85, 88
+function greet {
+  return "Hello " + name
+}
+const maxScore = 100
+maxScore = 95
+console.log(1student.name)
+console.log(scores[0])
+console.log(greet("Neha"))
+```
+
+**10. Concept Questions**  
+Answer the following in your own words with examples:
+
+a) What is the main difference between an **Object** and an **Array**?  
+b) Why does `typeof null` return `"object"`? Is `null` really an object?  
+c) Why is it recommended to keep arrays with a single data type?  
+d) When should you use `const` and when should you use `let`?---
+
+### Part H] - Non-Primitive Data Types Basic Creation & Usage (4 Questions)
+
+**1. Create an Object**  
+Create an object named `student` with the following properties:
+- `name` → `"Riya"`
+- `age` → `18`
+- `isEnrolled` → `true`  
+
+Print the entire object and then print each property individually.
+---
+Answer:01:-
+<img width="1080" height="572" alt="image" src="https://github.com/user-attachments/assets/8e089d00-c499-45b0-bb1b-88bcd6d2eeff" />
+
+---
+**2. Work with Arrays**  
+Create two arrays:
+- `scores` containing only numbers: `85, 92, 78, 90`
+- `mixedData` containing different types: a number, a string, a boolean, and `null`  
+
+Print both arrays. Also print the first and last element of the `scores` array using index.
+---
+Answer:02:-
+<img width="1080" height="422" alt="image" src="https://github.com/user-attachments/assets/7c573ffc-eed0-42e9-95e6-47363d7bf405" />
+
+---
+**3. Declare and Call a Function**  
+Write a function named `calculateArea` that takes two parameters (`length` and `width`) and returns the area of a rectangle.  
+Call the function twice with different values and print the results.
+---
+Answer:03:-
+<img width="1080" height="334" alt="image" src="https://github.com/user-attachments/assets/5d98ab68-9026-412e-b646-42c64f933822" />
+
+---
+**4. Check Types with `typeof`**  
+Create variables of the following types and print both the value and its type using `typeof`:
+- A number  
+- A string  
+- A boolean  
+- `null`  
+- An object  
+- An array  
+- A function  
+
+Observe and note any surprising results (especially with `null` and arrays).
+---
+Answer:04:-
+<img width="1080" height="477" alt="image" src="https://github.com/user-attachments/assets/dbe030f9-dbb2-41a4-a84d-3dd51dfc5737" />
+<img width="1080" height="429" alt="image" src="https://github.com/user-attachments/assets/97fb4497-31b8-4eca-928a-e3265a21d52f" />
+
+---
+
+### Part I] - Naming Rules & Best Practices (3 Questions)
+
+**5. Valid vs Invalid Variable Names**  
+Identify which of the following variable names are **valid** and which are **invalid**. For invalid ones, explain why.
+
+```javascript
+let userName;
+let 2ndPlace;
+let _privateData;
+let $price;
+let my-age;
+let function;
+let totalCount;
+let const;
+```
+---
+Answer:05:-
+<img width="1080" height="564" alt="image" src="https://github.com/user-attachments/assets/e230eb38-2c87-4e7f-ad71-e4f8ab64cc80" />
+
+---
+**6. Apply Best Practices**  
+Rewrite the following poorly written code using best practices (`const`/`let`, meaningful names, camelCase, UPPERCASE for constants):
+
+```javascript
+let x = 10;
+let y = 5;
+let a = x * y;
+let b = 100;
+```
+---
+Answer:06:-
+<img width="1080" height="273" alt="image" src="https://github.com/user-attachments/assets/78d662fa-c577-483c-9c65-015689fc1a4e" />
+
+---
+
+**7. Declaration & Assignment**  
+Write code that demonstrates:
+- Declaring a variable without assigning a value, then assigning a value later  
+- Declaring and assigning a value in one step  
+- Creating a constant that cannot be changed  
+
+Print all variables.
+
+---
+Answer:07:-
+<img width="1080" height="499" alt="image" src="https://github.com/user-attachments/assets/e48c0ea0-5a00-48d5-85d4-c1b0e4a7bdbf" />
+
+---
+
+### Part J] - Prediction & Fixing (3 Questions)
+
+**8. Predict the Output**  
+Without running the code, predict what each `console.log` will print. Explain your reasoning (especially for `typeof`).
+
+```javascript
+let person = { name: "Amit", age: 22 };
+let colors = ["red", "green", "blue"];
+function sayHi() {
+  return "Hi!";
+}
+let empty = null;
+
+console.log(typeof person);
+console.log(typeof colors);
+console.log(typeof sayHi);
+console.log(typeof empty);
+console.log(person.name);
+console.log(colors[1]);
+console.log(sayHi());
+```
+---
+Answer:08:-
+<img width="1080" height="493" alt="image" src="https://github.com/user-attachments/assets/1eef5f29-2ef8-4be2-a4e4-318bf73250fa" />
+
+---
+**9. Fix the Program**  
+The following code has multiple errors related to objects, arrays, functions, naming rules, and best practices. Fix it so that it runs correctly.
+
+```javascript
+let 1student = { name: "Neha", Age: 19 }
+let scores = 90, 85, 88
+function greet {
+  return "Hello " + name
+}
+const maxScore = 100
+maxScore = 95
+console.log(1student.name)
+console.log(scores[0])
+console.log(greet("Neha"))
+```
+---
+Answer:09:-
+<img width="1080" height="646" alt="image" src="https://github.com/user-attachments/assets/60e40aed-40c9-4652-af98-3fe399895b45" />
+
+---
+**10. Concept Questions**  
+Answer the following in your own words with examples:
+
+a) What is the main difference between an **Object** and an **Array**?  
+b) Why does `typeof null` return `"object"`? Is `null` really an object?  
+c) Why is it recommended to keep arrays with a single data type?  
+d) When should you use `const` and when should you use `let`?
+
+---
+Answer:10:-
+<img width="1280" height="712" alt="image" src="https://github.com/user-attachments/assets/2e388fc7-46c5-49cf-93e1-46637da58f64" />
+
+
+---
