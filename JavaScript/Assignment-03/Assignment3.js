@@ -217,29 +217,158 @@ m %= 0;
 console.log(m);        // NaN  Any number modulus 0 gives NaN.
 
 
+// ------- Exponentiation and Assign (**=)----------//
+
+
+
+// Answer:1-
+
+let side = 5;
+side **= 3;
+console.log(side);     // 125
+
+// Answer:1-
+
+let num = 4;
+num **= 2;
+console.log(num);      // 16
+
+
+// Answer :3-
+
+let base = 2;
+base **= 5;
+console.log(base);     // 32
+
+
+// Answer :4-
+
+let n = 4;
+n **= 0.5;
+console.log(n);        // 2
+
+// Answer :5-
+
+let p = 2;
+p **= -1;
+console.log(p);        // 0.5 => 2⁻¹ = 1/2 = 0.5
+
+
+
+// ------------C] Comparison Operators-------------//
+//---------- Loose Equality (==)----------//
+
+
+// Answer :1-
+
+console.log("25" == 25);     // true
+
+// Answer :2-
+
+console.log(0 == false);     // true
+
+// Answer :3-
+
+console.log(10 == "10");          // true
+console.log(null == undefined);   // true
+
+// Answer :4-
+
+console.log("" == 0);        // true
+console.log([] == false);    // true
+
+// Answer :5-
+
+console.log(NaN == NaN);     // false => NaN is never equal to anything, even itself.
+
+
+
+//-------Loose Inequality (!=)-------//
+
+
+
+// Answer-1
+
+console.log("18" != 18);     // false
+
+// Answer-2
+
+console.log("1234" != 1234); // false
+
+// Answer-3
+
+console.log(5 != "5");       // false
+console.log(0 != false);     // false
+
+// Answer-4
+
+console.log(null != undefined); // false
+console.log("" != 0);           // false
+
+// Answer-5
+
+console.log(NaN != NaN);     // true =>NaN is not equal to itself.
 
 
 
 
+//----------Strict Equality (===)----------//
 
 
 
+// Answer-1
+
+console.log("25" === 25);    // false
+
+// Answer-2
+
+console.log(0 === false);        // false
+console.log(null === undefined); // false
+
+// Answer-3
+
+console.log(10 === "10");    // false
+console.log(true === 1);     // false
+
+// Answer-4
+
+console.log("" === 0);       // false
+console.log([] === false);   // false
 
 
+// Answer-5
+
+(===) value aur data type dono check karta hai, isliye real-world projects me zyada use hota hai.
 
 
+//-------Strict Inequality (!==)------------//
 
 
+// Answer-1
 
+console.log("18" !== 18);    // true
 
+// Answer-2
 
+console.log(0 !== false);        // true
+console.log(null !== undefined); // true
 
+// Answer-3
 
+console.log(5 !== "5");      // true
+console.log(true !== 1);     // true
 
+// Answer-4
 
+console.log("" !== 0);       // true
+console.log(NaN !== NaN);    // true
 
+// Answer-5
 
+let input = "5";
 
-
+if (input !== "0") {
+    console.log("Input is not equal to '0'");
+}
 
 
