@@ -1,24 +1,24 @@
-# #----Question-1----#
+#----Question-1----#
 
-# # i = 1
+# i = 1
 
-# # while i <= 4:
-# #     print(i)
-# #     i += 1
+# while i <= 4:
+#     print(i)
+#     i += 1        # 1 2 3 4 
 
-# #----Question-2----#
+#----Question-2----#
 
-# # n=2
-# # while n<=8:
-# #     print(n, end=" ")
-# #     n += 2
+# n=2
+# while n<=8:
+#     print(n, end=" ")
+#     n += 2          # 2 4 6 8 
 
-# # #----Question-3-----#
+# #----Question-3-----#
 
 # n=5
 # while n>=1:
 #     print(n, end=" ")
-#     n -= 1
+#     n -= 1         # 5 4 3 2 1
 
 # #----Question-4-----#
 
@@ -26,7 +26,7 @@
 
 # while count < 5:
 #     print("Hello")
-#     count += 1
+#     count += 1       # loop will not run ; than frint Finished 
 
 # print("Finished")
 
@@ -36,7 +36,7 @@
 
 # while i <= 4:
 #     i += 1
-#     print(i, end=" ")
+#     print(i, end=" ")        # 2 3 4 5
 
 # #----Question-6-----#
 
@@ -44,7 +44,7 @@
 
 # while n <= 3:
 #     print(n, end=" ")
-#     n += 1
+#     n += 1            # 1 2 3 Done 
 
 # print("Done")
 
@@ -55,7 +55,7 @@
 # while x < 10:
 #     print(x, end=" ")
 #     x += 2
-#     x += 1
+#     x += 1          # 1 4 7
 
 #----Question-8-----#
 
@@ -63,7 +63,7 @@
 
 # while value > 0:
 #     value -= 3
-#     print(value, end=" ")
+#     print(value, end=" ")       # 7 4 1 -2 
 
 #----Question-9-----#
 
@@ -71,8 +71,8 @@
 # total = 0
 
 # while i <= 4:
-#     total += i
-#     i += 1
+#     total += i 
+#     i += 1              # 10
 
 # print(total)
 
@@ -84,7 +84,7 @@
 # while n <= 4:
 #     result *= 2
 #     n += 1
-# print(result)
+# print(result)         # 16
 
 #----Question-11-----#
 
@@ -92,7 +92,7 @@
 
 # while n > 0:
 #     print(n % 3, end=" ")
-#     n -= 4
+#     n -= 4            #  2 1 0 
 
 #----Question-12-----#
 
@@ -100,7 +100,7 @@
 
 # while number > 0:
 #     print(number // 10, end=" ")
-#     number //= 10
+#     number //= 10         #  58 5 0 
 
 #----Question-13-----#
 
@@ -108,7 +108,7 @@
 
 # while i <= 6:
 #     if i % 2 == 0:
-#         print(i, end=" ")
+#         print(i, end=" ")     # 2 4 6
 #     i += 1
 
 #----Question-14-----#
@@ -117,14 +117,14 @@
 
 # while n <= 5:
 #     print("Even" if n % 2 == 0 else "Odd", end=" ")
-#     n += 1
+#     n += 1                #             # odd even odd even odd 
 
 #----Question-15-----#
 
 # x = 1
 
 # while x < 10:
-#     print(x, end=" ")
+#     print(x, end=" ")     # 1 2 4 8 
 #     x *= 2
 
 #----Question-16-----#
@@ -132,7 +132,7 @@
 # i = 5
 
 # while i > 0:
-#     print(i, end=" ")
+#     print(i, end=" ")     #  5 3 1 step: -1
 #     i -= 2
 
 # print("Stop:", i)
@@ -144,7 +144,11 @@
 
 # while i <= 4:
 #     result += "A"
-#     print(result)
+#     print(result)      # A 
+                         # AA
+                         # AAA
+                        # AAAA
+
 #     i += 1
 
 #----Question-18-----#
@@ -155,8 +159,11 @@
 #     print(word)
 #     word += "T"
 
-# print(word)
-
+# print(word)             # PY 
+                         # PYT
+                         # PYTT
+                        # PYTTT
+                        # PYTTTT
 #----Question-19-----#
 
 # x = 3
@@ -165,14 +172,14 @@
 #     print("Inside")
 #     x += 1
 
-# print(x)
+# print(x)           # Lopp wil not run trhan print only x and x = 3
 
 #----Question-120-----#
 
-i = 1
+# i = 1
 
-while i <= 4:
-    print(i, end=" ")
-    i -= 1
+# while i <= 4:
+#     print(i, end=" ")
+#     i -= 1
 
-print("Finished")
+# print("Finished")    # loop is reapiting......... than last print- finished 
