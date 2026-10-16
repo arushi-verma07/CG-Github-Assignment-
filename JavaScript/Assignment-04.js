@@ -205,3 +205,303 @@
 // else {
 //     console.log("Invalid Income");
 // }
+
+
+// Question-3
+
+// let marks=23;
+// if (marks>=90){
+//     console.log("Outstanding")
+// }else if (marks>70 && marks<=89){
+//     console.log("Good") 
+// }else if (marks>40 && marks<=69){
+//     console.log("Avarage")
+// }else if (marks<40 && marks>=0){
+//     console.log("Needs Improvement")
+// }else{
+//     console.log("Invalid Number")
+// };
+
+
+// Question-4
+
+// let speed = 60;
+
+// if (speed < 40) {
+//     console.log("Slow");
+// } else if (speed >= 40 && speed <= 80) {
+//     console.log("Normal");
+// } else {
+//     console.log("Fast");
+// }
+
+// Question-5
+
+// let height = 160;
+
+// if (height < 150) {
+//     console.log("Short");
+// } else if (height >= 150 && height <= 170) {
+//     console.log("Average");
+// } else {
+//     console.log("Tall");
+// }
+
+// Question-6
+
+// let day = 6;
+
+// if (day >= 1 && day <= 5) {
+//     console.log("Weekday");
+// } else if (day == 6 || day == 7) {
+//     console.log("Weekend");
+// } else {
+//     console.log("Invalid Day");
+// }
+
+// Question-7
+
+// let units = 120;
+// let bill;
+
+// if (units >= 0 && units <= 50) {
+//     bill = units * 2;
+// } else if (units >= 51 && units <= 150) {
+//     bill = units * 4;
+// } else if (units > 150) {
+//     bill = units * 6;
+// } else {
+//     console.log("Invalid Units");
+// }
+
+// if (units >= 0) {
+//     console.log("Total Bill: ₹" + bill);
+// }
+
+// Question-8
+
+// let attendance = 85;
+
+// if (attendance >= 90) {
+//     console.log("Excellent");
+// } else if (attendance >= 75 && attendance < 90) {
+//     console.log("Good");
+// } else if (attendance >= 50 && attendance < 75) {
+//     console.log("Satisfactory");
+// } else if (attendance < 50 && attendance >= 0) {
+//     console.log("Poor");
+// } else {
+//     console.log("Invalid Attendance");
+// }
+
+// Question-9
+
+// let math = 85;
+// let science = 92;
+// let english = 78;
+
+// if (math > science && math > english) {
+//     console.log("Highest Marks: " + math);
+// } else if (science > math && science > english) {
+//     console.log("Highest Marks: " + science);
+// } else {
+//     console.log("Highest Marks: " + english);
+// }
+
+// Question-10
+
+// let num = -7;
+
+// if (num == 0) {
+//     console.log("Zero");
+// } else if (num > 0 && num % 2 == 0) {
+//     console.log("Positive Even");
+// } else if (num > 0 && num % 2 != 0) {
+//     console.log("Positive Odd");
+// } else if (num < 0 && num % 2 == 0) {
+//     console.log("Negative Even");
+// } else {
+//     console.log("Negative Odd");
+// }
+
+
+
+
+
+// .D] Nested if Statement
+
+
+
+// Question-1
+
+// let num =15;
+// if (num > 10){
+//     if(num % 3 == 0){
+//         console.log("Greater Than 10 and divisible by 3")
+//     }else{
+//         console.log("Greater than 10 but not divisible by 3")
+//     }
+// }else{
+//     console.log("Number is not greater than 10 ")
+// }
+
+// Question-2
+
+// let age = 20;
+// let hasVoterID = true;
+
+// if(age >= 18){
+//     if(hasVoterID == true){
+//         console.log("Can Vote");
+//     }else{
+//         console.log("Voter ID Required");
+//     }
+// }else{
+//     console.log("Not Eligible to Vote ")
+// }
+
+// // Question-3
+
+// let marks = 85;
+
+// if (marks >= 40) {
+//     if (marks >= 80) {
+//         console.log("Passed with Distinction");
+//     } else {
+//         console.log("Passed");
+//     }
+// } else {
+//     console.log("Failed");
+// }
+
+// // Question-4
+
+// let pin = 1234;
+// let enteredPin = 1234;
+// let balance = 5000;
+// let withdrawal = 2000;
+
+// if (enteredPin == pin) {
+//     if (balance >= withdrawal) {
+//         console.log("Withdrawal Successful");
+//     } else {
+//         console.log("Insufficient Balance");
+//     }
+// } else {
+//     console.log("Incorrect PIN");
+// }
+
+// // Question-5
+
+// let year = 2024;
+
+// if (year % 4 == 0) {
+//     if (year % 100 == 0) {
+//         if (year % 400 == 0) {
+//             console.log("Leap Year");
+//         } else {
+//             console.log("Not a Leap Year");
+//         }
+//     } else {
+//         console.log("Leap Year");
+//     }
+// } else {
+//     console.log("Not a Leap Year");
+// }
+
+// // Question-6
+
+// let email = "student@gmail.com";
+
+// if (email.includes("@")) {
+//     if (email.endsWith(".com")) {
+//         if (email.length > 10) {
+//             console.log("Valid Email");
+//         } else {
+//             console.log("Email length is too short");
+//         }
+//     } else {
+//         console.log("Email must end with .com");
+//     }
+// } else {
+//     console.log("Email must contain @");
+// }
+
+// // Question-7
+
+// let cartTotal = 1500;
+// let isPremium = true;
+// let discount;
+// let finalAmount;
+
+// if (cartTotal >= 1000) {
+//     if (isPremium == true) {
+//         discount = 20;
+//     } else {
+//         discount = 10;
+//     }
+// } else {
+//     discount = 0;
+// }
+
+// finalAmount = cartTotal - (cartTotal * discount / 100);
+
+// console.log("Final Amount: ₹" + finalAmount);
+
+// // Question-8
+
+// let num = 16;
+
+// if (num > 0) {
+//     if (num % 2 == 0) {
+//         if (num % 4 == 0) {
+//             console.log("Positive Even and Divisible by 4");
+//         } else {
+//             console.log("Positive Even but Not Divisible by 4");
+//         }
+//     } else {
+//         console.log("Positive Odd");
+//     }
+// } else {
+//     console.log("Number is Not Positive");
+// }
+
+// // Question-9
+
+// let age = 25;
+// let hasDegree = true;
+// let experience = 3;
+
+// if (age >= 21 && age <= 30) {
+//     if (hasDegree == true) {
+//         if (experience >= 2) {
+//             console.log("Eligible for Interview");
+//         } else {
+//             console.log("Not Enough Experience");
+//         }
+//     } else {
+//         console.log("Graduation Degree Required");
+//     }
+// } else {
+//     console.log("Age Not Valid");
+// }
+
+// // Question-10
+
+// let isPresent = true;
+// let internalMarks = 35;
+// let externalMarks = 40;
+
+// if (isPresent == true) {
+//     if (internalMarks >= 30) {
+//         if (externalMarks >= 35) {
+//             console.log("Eligible for Final Exam");
+//         } else {
+//             console.log("External Marks Not Valid");
+//         }
+//     } else {
+//         console.log("Internal Marks Not Valid");
+//     }
+// } else {
+//     console.log("Student is Absent");
+// }
