@@ -505,3 +505,431 @@
 // } else {
 //     console.log("Student is Absent");
 // }
+
+
+
+
+
+// E] switch Statement – 10 Questions:-
+
+
+// Question 1
+// let month = 10
+
+// switch (true){
+//     case month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12: 
+//         console.log("31 days");
+//         break;
+//     case month == 4 || month == 6 || month == 9 || month == 11:
+//         console.log("30 days");
+//         break;
+//     case month == 2:
+//         console.log("28 days");
+//         break;
+//     default:
+//         console.log("Invalid month number!");
+// }
+
+
+// Question 2
+// let character = "a"
+
+// switch (true){
+//     case character == "a" || character == "e" || character == "i" || character == "o" || character == "u" || character == "A" || character == "E" || character == "I" || character == "O" || character == "U":
+//         console.log("Vowel");
+//         break;
+//     default:
+//         console.log("Consonant");
+// }
+
+
+// Question 3
+// let number = 2;
+
+// switch (true){
+//     case number == 1 || number == 2:
+//         console.log("Winter");
+//         break;
+//     case number == 3 || number == 4:
+//         console.log("Summer");
+//         break;
+//     default:
+//         console.log("Invalid Number!");
+// }
+
+
+// Question 4
+// let marks = 65
+
+// switch (true){
+//     case marks>=75:
+//         console.log("Distinction");
+//         break;
+//     case marks>=60:
+//         console.log("1st class");
+//         break;
+//     case marks>=50:
+//         console.log("2nd class");
+//         break;
+//     case marks>=35:
+//         console.log("3rd class");
+//         break;
+//     default:
+//         console.log("Failed");
+// }
+
+
+// Question 5
+// let role = "admin"
+
+// switch (role){
+//     case "admin":
+//         let action = "create"
+//         switch (action) {
+//             case "create":
+//                 console.log("Create");
+//                 break;
+//             case "edit":
+//                 console.log("Edit");
+//                 break;
+//             case "delete":
+//                 console.log("Delete");
+//                 break;
+//         }
+//         break;
+//     case "user":
+//         console.log("Limited Access");
+//         break;
+// }
+
+
+// Question 6
+// let fruit = "mango";
+
+// switch (fruit) {
+//   case "apple":
+//     console.log("Apple is red");
+//     break;
+//   case "mango":
+//     console.log("Mango is yellow");
+//     break;
+//   case "banana":
+//     console.log("Banana is yellow");
+//     break;
+//   default:
+//     console.log("Unknown fruit");
+// }
+
+// Output:
+// Mango is yellow
+// Banana is yellow
+// Unknown fruit
+
+// Because there was no break statement to stop the further execution, every single case ran
+
+
+// Question 7
+// let value = null
+// switch (value){
+//     case 0:
+//         console.log("Value is 0");
+//         break;
+//     case "0":
+//         console.log("Value is 0 as a string");
+//         break;
+//     case null:
+//         console.log("Value is null");
+//         break;
+//     case false:
+//         console.log("Value is false");
+//         break;
+//     case undefined:
+//         console.log("Value is undefined");
+//         break;
+//     default:
+//         console.log("Invalid Value");
+// }
+
+
+// Question 8
+// let num1 = 24
+// let num2 = 56
+// let operator = "*"
+
+// switch (operator){
+//     case "+":
+//         console.log(num1 + num2);
+//         break;
+//     case "-":
+//         console.log(num1 - num2);
+//         break;
+//     case "*":
+//         console.log(num1 * num2);
+//         break;
+//     case "**":
+//         console.log(num1 ** num2);
+//         break;
+//     case "/":
+//         switch (num2) {
+//             case 0:
+//                 console.log("Error! Can't divide by zero");
+//                 break;
+//             default:
+//                 console.log(num1 / num2);
+//                 break;
+//         }
+//         break;
+//     default:
+//         console.log("Invalid Operator!");
+// }
+
+
+// Question 9
+// let date = 12
+
+// switch (true){
+//     case date>=1 && date<=10:
+//         console.log("Beginning of the month");
+//         break;
+//     case date>=11 && date<=20:
+//         console.log("Middle of the month");
+//         break;
+//     case date>=21 && date<=31:
+//         console.log("End of the month");
+//         break;
+//     default:
+//         console.log("Invalid Date!");
+// }
+
+
+// Question 10
+// let category = "veg"
+// let item
+// let size
+// let price
+
+// switch (category){
+//     case "veg":
+//         item = "item1"
+//         switch (item){
+//             case "item1":
+//                 price = 150
+//                 size = "full"
+
+//                 switch (size){
+//                     case "half":
+//                         price *= 0.5
+//                         console.log("Category:", category);
+//                         console.log("Item:", item);
+//                         console.log("Size:", size);
+//                         console.log("Price:", price);
+//                         break;
+//                     case "full":
+//                         price *= 1
+//                         console.log("Category:", category);
+//                         console.log("Item:", item);
+//                         console.log("Size:", size);
+//                         console.log("Price:", price);
+//                         break;
+//                     default:
+//                         console.log("Invalid Size!");
+//                 }
+//                 break;
+//             case "item2":
+//                 price = 200
+//                 size = "half"
+
+//                 switch (size){
+//                     case "half":
+//                         price *= 0.5
+//                         console.log("Category:", category);
+//                         console.log("Item:", item);
+//                         console.log("Size:", size);
+//                         console.log("Price:", price);
+//                         break;
+//                     case "full":
+//                         price *= 1
+//                         console.log("Category:", category);
+//                         console.log("Item:", item);
+//                         console.log("Size:", size);
+//                         console.log("Price:", price);
+//                         break;
+//                     default:
+//                         console.log("Invalid Size!");
+//                 }
+//                 break;
+//             case "item3":
+//                 price = 165
+//                 size = "half"
+
+//                 switch (size){
+//                     case "half":
+//                         price *= 0.5
+//                         console.log("Category:", category);
+//                         console.log("Item:", item);
+//                         console.log("Size:", size);
+//                         console.log("Price:", price);
+//                         break;
+//                     case "full":
+//                         price *= 1
+//                         console.log("Category:", category);
+//                         console.log("Item:", item);
+//                         console.log("Size:", size);
+//                         console.log("Price:", price);
+//                         break;
+//                     default:
+//                         console.log("Invalid Size!");
+//                 }
+//                 break;
+//             default:
+//                 console.log("Invalid Item!");
+//         }
+//         break;
+//     case "nonveg":
+//         item = "item2"
+//         switch (item){
+//             case "item1":
+//                 price = 315
+//                 size = "full"
+
+//                 switch (size){
+//                     case "half":
+//                         price *= 0.5
+//                         console.log("Category:", category);
+//                         console.log("Item:", item);
+//                         console.log("Size:", size);
+//                         console.log("Price:", price);
+//                         break;
+//                     case "full":
+//                         price *= 1
+//                         console.log("Category:", category);
+//                         console.log("Item:", item);
+//                         console.log("Size:", size);
+//                         console.log("Price:", price);
+//                         break;
+//                     default:
+//                         console.log("Invalid Size!");
+//                 }
+//                 break;
+//             case "item2":
+//                 price = 479
+//                 size = "full"
+
+//                 switch (size){
+//                     case "half":
+//                         price *= 0.5
+//                         console.log("Category:", category);
+//                         console.log("Item:", item);
+//                         console.log("Size:", size);
+//                         console.log("Price:", price);
+//                         break;
+//                     case "full":
+//                         price *= 1
+//                         console.log("Category:", category);
+//                         console.log("Item:", item);
+//                         console.log("Size:", size);
+//                         console.log("Price:", price);
+//                         break;
+//                     default:
+//                         console.log("Invalid Size!");
+//                 }
+//                 break;
+//             case "item3":
+//                 price = 220
+//                 size = "full"
+
+//                 switch (size){
+//                     case "half":
+//                         price *= 0.5
+//                         console.log("Category:", category);
+//                         console.log("Item:", item);
+//                         console.log("Size:", size);
+//                         console.log("Price:", price);
+//                         break;
+//                     case "full":
+//                         price *= 1
+//                         console.log("Category:", category);
+//                         console.log("Item:", item);
+//                         console.log("Size:", size);
+//                         console.log("Price:", price);
+//                         break;
+//                     default:
+//                         console.log("Invalid Size!");
+//                 }
+//                 break;
+//             default:
+//                 console.log("Invalid Item!");
+//         }
+//         break;
+//     default:
+//         console.log("Invalid Category");
+// }
+
+
+// F] Ternary Operator Questions
+
+
+// Question 1
+// let num = 28
+// num % 7 == 0 ? console.log("Divisible by 7") : console.log("Not Divisible by 7")
+
+
+// Question 2
+// let temperature = 12
+// temperature >= 30 ? console.log("Hot Day") : console.log("Pleasant Day")
+
+
+// Question 3
+// let string = "JS"
+// string == "" ? console.log("Empty String") : console.log("String has content")
+
+
+// Question 4
+// let age = 17
+// age < 13 ? console.log("Child") : age < 19 ? console.log("Teenager") : console.log("Adult")
+
+
+// Question 5
+// let a = 12
+// let b = 14
+// let c = 17
+// a > b && a > c ? console.log(a) : b > c && b > a ? console.log(b) : console.log(c);
+
+
+// Question 6
+// let marks = 97
+// marks >= 75 ? console.log("Distinction") : marks >= 60 ? console.log("First Class") : marks >= 50 ? console.log("Second Class") : marks >= 35 ? console.log("Pass") : console.log("Fail")
+
+
+// Question 7
+// let num = 45
+// num % 2 == 0 && num > 0 ? console.log("Positive Even") : num % 2 == 0 && num < 0 ? console.log("Negative Even") : num % 2 != 0 && num > 0 ? console.log("Positive Odd") : num % 2 != 0 && num < 0 ? console.log("Negative Odd") : console.log("Zero")
+
+
+// Question 8
+// let year = 2100
+// year % 4 == 0 && (year % 100 != 0 || year % 400 == 0) ? console.log("Leap Year") : console.log("Not a Leap Year")
+
+
+// Question 9
+// if (role === "admin") {
+//   if (action === "delete") → "Admin Delete"
+//   else if (action === "edit") → "Admin Edit"
+//   else → "Admin Other"
+// } else if (role === "user") {
+//   if (action === "view") → "User View"
+//   else → "User Restricted"
+// } else {
+//   → "Invalid Role"
+// }
+
+// let role = "admin"
+// let action = "edit"
+
+// role === "admin" ? (action === "delete" ? console.log("Admin Delete") : action === "edit" ? console.log("Admin Edit") : console.log("Admin Other")) : role === "user" ? (action === "view" ? console.log("User View") : console.log("User Restricted")) : console.log("Invalid Role")
+
+
+// Question 10
+// let cartTotal = 6000
+// cartTotal >= 5000 ? console.log(`Discount Percentage: 20, Final Payable Amount: ${cartTotal - cartTotal * 0.2}`) : cartTotal >= 2000 ? console.log(`Discount Percentage: 10, Final Payable Amount: ${cartTotal - cartTotal * 0.1}`) : cartTotal >= 1000 ? console.log(`Discount Percentage: 5, Final Payable Amount: ${cartTotal - cartTotal * 0.05}`) : console.log(`Discount Percentage: 0, Final Payable Amount: ${cartTotal}`)
+
