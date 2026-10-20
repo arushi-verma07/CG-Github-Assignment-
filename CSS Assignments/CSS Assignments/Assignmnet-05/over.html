@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Scoreboard</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0d1117;
+    font-family: Arial, sans-serif;
+}
+
+.scoreboard {
+    width: 850px;
+    height: 465px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    background:
+        linear-gradient(rgba(4, 15, 28, 0.65), rgba(0, 25, 0, 0.65)),
+        repeating-linear-gradient(
+            90deg,
+            #142b3e 0px,
+            #142b3e 2px,
+            #102438 2px,
+            #102438 4px
+        );
+    position: relative;
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+.logo {
+    text-align: center;
+    color: white;
+    font-size: 17px;
+    line-height: 17px;
+    margin-bottom: 48px;
+}
+
+.teams {
+    display: flex;
+    justify-content: center;
+    gap: 58px;
+}
+
+.team {
+    width: 269px;
+    height: 216px;
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 26px;
+    color: white;
+}
+
+.ind {
+    background: #1760ad;
+}
+
+.pak {
+    background: #38a52c;
+}
+
+.team h1 {
+    font-size: 52px;
+    margin-bottom: 25px;
+}
+
+.runs {
+    display: flex;
+    gap: 5px;
+}
+
+.runs span {
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    background: white;
+    color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.team h2 {
+    font-size: 29px;
+    margin-top: 14px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 46px;
+}
+
+.buttons button {
+    width: 60px;
+    height: 60px;
+    border: 3px solid white;
+    border-radius: 19px;
+    color: white;
+    font-size: 37px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px #000;
+}
+
+.bat {
+    background: #ffbd36;
+}
+
+.reset {
+    background: #f52222;
+}
+    </style>
+</head>
+<body>
+
+    <div class="scoreboard">
+
+        <h3 class="logo">🏏 SUPER<br>OVER</h3>
+
+        <div class="teams">
+            <div class="team ind">
+                <h1>IND</h1>
+                <div class="runs">
+                    <span>4</span>
+                    <span>3</span>
+                    <span>2</span>
+                    <span>6</span>
+                    <span>6</span>
+                    <span>6</span>
+                </div>
+                <h2>27/0</h2>
+            </div>
+
+            <div class="team pak">
+                <h1>PAK</h1>
+                <div class="runs">
+                    <span>2</span>
+                    <span>4</span>
+                    <span>0</span>
+                    <span>3</span>
+                    <span>1</span>
+                    <span>4</span>
+                </div>
+                <h2>14/0</h2>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="bat">🏏</button>
+            <button class="reset">⟲</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

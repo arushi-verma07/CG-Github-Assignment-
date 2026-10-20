@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        body{
+            display:flex;
+            align-items: center;
+            justify-content:center
+        }
+        .calculator{
+            height:660px;
+            width:400px;
+            border: 2px solid ;
+            margin-top: 10px;
+            background-color: #282626;
+            border-radius: 20px;
+            box-shadow:10px 10px 25px #777777, -5px -5px 15px #ffffff ;
+            
+        }
+        .contain{
+            height:150px;
+            width:400px;
+            /* border:2px solid red; */
+            display: flex;
+            justify-content: end;
+            align-items: end;
+            padding-right: 50px;
+            font-size: 100px;
+            color: white;
+
+        }
+        .value{
+            height:510px;
+            width:400px;
+            /* border: 2px solid blue; */
+        
+        }
+        .btn{
+            height:80px;
+            width:80px;
+            border-radius: 50%;
+            margin:8px;
+            border-style: none;
+            
+            /* padding-bottom: 20px; */
+            
+        }
+        .one{
+            background-color: #9d9898;
+            color:rgb(12, 12, 12);
+            font-size: 25px;
+        }
+        .two{
+            background-color: #424141;
+            color:white;
+            font-size: 25px;
+        } 
+          .three{
+            background-color: #424141;
+            color:white;
+            font-size: 25px;
+        } 
+          .four{
+            background-color: #424141;
+            color:white;
+            font-size: 25px;
+        } 
+          .five{
+            background-color: #424141;
+            color:white;
+            font-size: 25px;
+        } 
+          .orange{
+            background-color: #db7438;
+            color:white;
+            font-size: 25px;
+        } 
+
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="contain"> 7744</div>
+        <div class="value">
+            <button class="btn one"> C </button>
+            <button class="btn one"> +/- </button>
+            <button class="btn one"> % </button>
+            <button class="btn orange"> / </button>
+            <button class="btn two"> 7 </button>
+            <button class="btn two"> 8 </button>
+            <button class="btn two"> 9 </button>
+            <button class="btn orange"> * </button>
+            <button class="btn three"> 4 </button>
+            <button class="btn three"> 5 </button>
+            <button class="btn three"> 6 </button>
+            <button class="btn orange"> - </button>
+            <button class="btn four"> 1 </button>
+            <button class="btn four"> 2 </button>
+            <button class="btn four"> 3 </button>
+            <button class="btn orange"> + </button>
+            <button class="btn five"> 0 </button>
+            <button class="btn five"> . </button>
+            <button class="btn five"> , </button>
+            <button class="btn orange"> = </button>
+        </div>
+       
+    </div>
+</body>
+</html>
