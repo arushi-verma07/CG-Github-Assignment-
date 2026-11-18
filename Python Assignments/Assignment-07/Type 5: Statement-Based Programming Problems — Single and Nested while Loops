@@ -1,0 +1,356 @@
+# Answer:79:-
+
+# n = int(input("Enter number: "))
+# i = 2
+
+# while i < n:
+#     if n % i == 0:
+#         break
+#     i += 1
+
+# if n > 1 and i == n:
+#     print("Prime")
+# else:
+#     print("Not Prime")
+
+# Answer:80:-
+
+# a = int(input("Enter A: "))
+# b = int(input("Enter B: "))
+
+# while b != 0:
+#     a, b = b, a % b
+
+# print(a)
+
+# Answer:81:-
+
+# a = int(input("Enter A: "))
+# b = int(input("Enter B: "))
+
+# lcm = max(a, b)
+
+# while lcm % a != 0 or lcm % b != 0:
+#     lcm += 1
+
+# print(lcm)
+
+# Answer:82:-
+
+# n = int(input("Enter number: "))
+# i = 1
+# total = 0
+
+# while i < n:
+#     if n % i == 0:
+#         total += i
+#     i += 1
+
+# if total == n and n > 1:
+#     print("Perfect")
+# else:
+#     print("Not Perfect")
+
+# Answer:83:-
+
+# n = int(input("Enter number: "))
+# temp = n
+# total = 0
+
+# while temp > 0:
+#     digit = temp % 10
+
+#     fact = 1
+#     if digit == 0:
+#         fact = 1
+#     elif digit == 1:
+#         fact = 1
+#     elif digit == 2:
+#         fact = 2
+#     elif digit == 3:
+#         fact = 6
+#     elif digit == 4:
+#         fact = 24
+#     elif digit == 5:
+#         fact = 120
+#     elif digit == 6:
+#         fact = 720
+#     elif digit == 7:
+#         fact = 5040
+#     elif digit == 8:
+#         fact = 40320
+#     else:
+#         fact = 362880
+
+#     total += fact
+#     temp //= 10
+
+# if total == n:
+#     print("Strong")
+# else:
+#     print("Not Strong")
+
+# Answer:84:-
+
+# n = int(input("Enter number: "))
+# temp = n
+# count = 0
+# total = 0
+
+# if n == 0:
+#     count = 1
+
+# while temp > 0:
+#     count += 1
+#     temp //= 10
+
+# temp = n
+
+# while temp > 0:
+#     digit = temp % 10
+#     total += digit ** count
+#     temp //= 10
+
+# if total == n:
+#     print("Armstrong")
+# else:
+#     print("Not Armstrong")
+
+# Answer:85:-
+
+# n = int(input("Enter number: "))
+# binary = 0
+# place = 1
+
+# if n == 0:
+#     print(0)
+# else:
+#     while n > 0:
+#         rem = n % 2
+#         binary += rem * place
+#         place *= 10
+#         n //= 2
+
+#     print(binary)
+
+# Answer:86:-
+
+# n = int(input("Enter number: "))
+# i = 1
+# total = 0
+
+# while i <= n:
+#     if n % i == 0:
+#         total += i
+#     i += 1
+
+# print(total)
+
+# Answer:87:-
+
+# n = int(input("Enter number: "))
+# i = 1
+
+# while i <= n:
+#     j = 1
+#     while j <= i:
+#         print(j, end=" ")
+#         j += 1
+#     print()
+#     i += 1
+
+# Answer:88:-
+
+# r = int(input("Enter rows: "))
+# c = int(input("Enter columns: "))
+
+# i = 1
+# while i <= r:
+#     j = 1
+#     while j <= c:
+#         if i == 1 or i == r or j == 1 or j == c:
+#             print("*", end=" ")
+#         else:
+#             print(" ", end=" ")
+#         j += 1
+#     print()
+#     i += 1
+
+
+# Answer:89:-
+
+# n = int(input("Enter number: "))
+# i = 1
+
+# while i <= n:
+#     j = 1
+#     while j <= n - i:
+#         print("  ", end="")
+#         j += 1
+
+#     k = 1
+#     while k <= i:
+#         print("*", end=" ")
+#         k += 1
+
+#     print()
+#     i += 1
+
+# Answer:90:-
+
+# n = int(input("Enter number: "))
+# i = 1
+
+# while i <= n:
+#     j = 1
+#     while j <= n:
+#         print(i * j, end=" ")
+#         j += 1
+#     print()
+#     i += 1
+
+# Answer:91:-
+
+# n = int(input("Enter N: "))
+# a = 0
+# b = 1
+
+# while a <= n:
+#     print(a, end=" ")
+#     a, b = b, a + b
+
+# Answer:92:-
+
+# n = int(input("Enter N: "))
+# i = 2
+
+# while i <= n:
+#     j = 2
+#     while j < i:
+#         if i % j == 0:
+#             break
+#         j += 1
+
+#     if j == i:
+#         print(i, end=" ")
+#     i += 1
+
+# Answer:93:-
+
+# n = int(input("Enter N: "))
+# i = 0
+
+# while i <= n:
+#     temp = i
+#     count = 0
+#     total = 0
+
+#     if temp == 0:
+#         count = 1
+
+#     while temp > 0:
+#         count += 1
+#         temp //= 10
+
+#     temp = i
+
+#     while temp > 0:
+#         digit = temp % 10
+#         total += digit ** count
+#         temp //= 10
+
+#     if total == i:
+#         print(i, end=" ")
+
+#     i += 1
+
+# Answer:94:-
+
+# n = int(input("Enter N: "))
+# i = 1
+
+# while i <= n:
+#     j = 1
+#     total = 0
+
+#     while j < i:
+#         if i % j == 0:
+#             total += j
+#         j += 1
+
+#     if total == i and i > 1:
+#         print(i, end=" ")
+
+#     i += 1
+
+# Answer:95:-
+
+# n = int(input("Enter N: "))
+# a = 1
+
+# while a < n - a:
+#     b = n - a
+#     print(a, "+", b)
+#     a += 1
+
+# Answer:96:-
+
+# s = int(input("Enter digit sum: "))
+# n = 10
+
+# while n <= 99:
+#     a = n // 10
+#     b = n % 10
+
+#     if a + b == s:
+#         print(n, end=" ")
+
+#     n += 1
+
+# Answer:97:-
+
+# a = int(input("Enter A: "))
+# b = int(input("Enter B: "))
+# i = 1
+
+# while i <= a and i <= b:
+#     if a % i == 0 and b % i == 0:
+#         print(i, end=" ")
+#     i += 1
+
+# Answer:98:-
+
+# n = int(input("Enter N: "))
+# a = 2
+# found = False
+
+# while a * a <= n:
+#     b = n // a
+
+#     if n % a == 0:
+#         j = 2
+#         prime1 = True
+
+#         while j < a:
+#             if a % j == 0:
+#                 prime1 = False
+#                 break
+#             j += 1
+
+#         k = 2
+#         prime2 = True
+
+#         while k < b:
+#             if b % k == 0:
+#                 prime2 = False
+#                 break
+#             k += 1
+
+#         if prime1 and prime2:
+#             print(a, "*", b)
+#             found = True
+
+#     a += 1
+
+# if not found:
+#     print("No prime factor pair")
