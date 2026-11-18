@@ -1,0 +1,428 @@
+//------Section-01: What is Function------//
+
+// // Answer-01:-
+
+// We use functions to avoid code repetition. They make code reusable, short, and easy to manage.
+
+// function greet() {
+//     console.log("Hello!");
+// }
+
+// greet();
+// greet();
+
+// // Answer-02:-
+
+// 1. Code Reusability: Use the same code multiple times.
+// 2. Less Repetition: Avoid writing the same code again and again.
+// 3. Easy Debugging: Errors can be found and fixed easily.
+// 4. Easy Maintenance: Code becomes easier to update and manage.
+
+// // Answer-03:-
+
+// I will create a function for the welcome message and call it at all 6 places. This avoids code repetition and saves time.
+
+// function welcome() {
+//     console.log("Welcome!");
+// }
+
+// welcome();
+// welcome();
+// welcome();
+// welcome();
+// welcome();
+// welcome();
+
+// // Answer-04:-
+
+// Without Function (Code Repeated Twice):
+// console.log("Hello!");
+// console.log("Hello!");
+
+
+// With Function:
+// function greet() {
+//     console.log("Hello!");
+// }
+
+// greet();
+// greet();
+// // Answer-05:-
+
+// Answer: A function is like a washing machine. We put clothes inside, press a button, and it performs a fixed task.
+
+// // Answer-06:-
+
+// Answer: Functions make debugging easier because we can find and fix errors in a specific block of code without checking the entire program.
+
+
+// //-------Section-02: Function Declaration------//
+
+// // Answer-01:-
+
+// function displayCourse() {
+//     return "JavaScript Fundamentals";
+// }
+
+// console.log(displayCourse());
+
+// // Answer-02:-
+
+// function getStudentStatus() {
+//     return "Active Learner";
+// }
+
+// let status = getStudentStatus();
+// console.log(status);
+
+// // Answer-03:-
+
+// greet();
+
+// function greet() {
+//     console.log("Hello!");
+// }
+
+
+// //------Section-03: Function Expression------//
+
+// // Answer-01:-
+
+// const showMotto = function() {
+//     return "Code. Learn. Grow.";
+// };
+
+// console.log(showMotto());
+
+// // Answer-02:-
+
+// const getSemester = function() {
+//     return 3;
+// };
+
+// console.log(getSemester());
+
+// // Answer-03:-
+
+// showMotto();
+
+// const showMotto = function() {
+//     console.log("Code. Learn. Grow.");
+// };
+
+// //------Section-04: Function Calling------//
+
+// // Answer-01:-
+
+// function greetStudent() {
+//     return "All the best for your coding journey!";
+// }
+
+// console.log(greetStudent());
+// console.log(greetStudent());
+// console.log(greetStudent());
+// console.log(greetStudent());
+
+// // Answer-02:-
+
+// const todayFocus = function() {
+//     return "Focus on functions today";
+// };
+
+// let result = todayFocus();
+// console.log(result);
+
+// // Answer-03:-
+
+// function greet() {
+//     return "Hello Student!";
+// }
+
+// const welcome = function() {
+//     return "Welcome to JavaScript!";
+// };
+
+// console.log(greet());
+// console.log(greet());
+
+// console.log(welcome());
+// console.log(welcome());
+
+
+// // Section 5: Parameters vs Arguments
+
+// // Answer-01:-
+// function subtract(a, b) {
+//     return a - b;
+// }
+
+// console.log(subtract(50, 18));
+
+// // Answer-02:-
+
+// const greetUser = function(name) {
+//     return "Welcome, " + name + "!";
+// };
+
+// console.log(greetUser("Aarav"));
+
+// // Answer-03:-
+
+// function calculateArea(length, breadth) {
+//     return length * breadth;
+// }
+
+// console.log(calculateArea(12, 5));
+// console.log(calculateArea(8, 9));
+
+// // Answer-04:-
+
+// Parameter: Variable written in the function definition.
+
+
+
+// Argument: Actual value passed when calling the function.
+
+// function greet(name) {  // Parameter
+//     console.log(name);
+// }
+
+// greet("Aarav");  // Argument
+
+// // Answer-05:-
+
+// Yes, a function can be called without arguments. In that case, the parameters get the value undefined by default.
+
+// function greet(name) {
+//     console.log(name);
+// }
+
+// greet();
+
+
+// // Section 6: Return Statement
+
+// // Answer-01:-
+
+// function squareOfNumber(n) {
+//     return n * n;
+// }
+
+// console.log(squareOfNumber(9));
+
+// // Answer-02:-
+
+// function isAdult(age) {
+//     return age >= 18;
+// }
+
+// console.log(isAdult(17));
+// console.log(isAdult(20));
+
+// // Answer-03:-
+
+// function getFullName(firstName, lastName) {
+//     return firstName + " " + lastName;
+// }
+
+// console.log(getFullName("Rohit", "Sharma"));
+
+// // Answer-04:-
+
+// If there is no return statement, a function returns undefined by default.
+
+// // Answer-05:-
+
+// We use return to send a value back from a function so we can store or reuse it. console.log() only displays the value on the screen.
+
+
+// // Section 7: Why Use Functions? (Real-world Example)
+
+// // Answer-01:-
+
+// function getTotal(m1, m2, m3) {
+//     return m1 + m2 + m3;
+// }
+
+// console.log(getTotal(80, 75, 90));
+// console.log(getTotal(70, 85, 80));
+// console.log(getTotal(90, 88, 95));
+// console.log(getTotal(60, 70, 75));
+
+// // Answer-02:-
+
+// function calculateSimpleInterest(principal, rate, time) {
+//     return (principal * rate * time) / 100;
+// }
+
+// console.log(calculateSimpleInterest(5000, 5, 2));
+// console.log(calculateSimpleInterest(10000, 10, 3));
+
+// // Answer-03:-
+
+// let avg1 = (10 + 20 + 30) / 3;
+// console.log(avg1);
+
+// let avg2 = (40 + 50 + 60) / 3;
+// console.log(avg2);
+
+// With Function:
+// function findAverage(a, b, c) {
+//     return (a + b + c) / 3;
+// }
+
+// console.log(findAverage(10, 20, 30));
+// console.log(findAverage(40, 50, 60));
+
+// // Answer-04:-
+
+// Functions reduce code repetition by allowing us to write code once and reuse it whenever needed.
+
+// Example: A calculator uses the same addition function for different numbers.
+
+// // Answer-05:-
+
+// 1. Code Reusability: Use code multiple times.
+// 2. Easy Debugging: Find and fix errors easily.
+// 3. Easy Maintenance: Makes code easier to update and manage.
+
+
+// // Section 8: Function Scope
+
+// // Answer-01:-
+
+// function showCity() {
+//     let city = "Ahmedabad";
+//     console.log(city);
+// }
+
+// showCity();
+// console.log(city);
+
+// // Answer-0:2-
+
+// let trainer = "CodingGita Mentor";
+
+// function displayTrainer() {
+//     console.log(trainer);
+// }
+
+// displayTrainer();
+// console.log(trainer);
+
+// // Answer-03:-
+
+// function demoScope() {
+//     let value = 50;
+//     console.log(value);
+// }
+
+// demoScope();
+// console.log(value);
+
+// // Answer-04:-
+
+// JavaScript follows this rule because of local scope. It protects variables from unwanted changes and makes code safer and easier to manage.
+
+// // Answer-05:-
+
+// If a global and local variable have the same name, the function uses the local variable because local variables have priority inside their scope.
+
+
+// // Section 9: Combining Function Concepts
+
+// // Answer-0:-
+
+// function generateMessage(name, score) {
+//     let result = score >= 40 ? "Pass" : "Fail";
+//     return name + " has scored " + score + " and the result is " + result;
+// }
+
+// console.log(generateMessage("Aarav", 65));
+
+// // Answer-02:-
+
+// function billCalculator(item1, item2, item3) {
+//     let total = item1 + item2 + item3;
+//     let discount = total >= 1000 ? "Discount Applied" : "No Discount";
+
+//     return "Total: " + total + ", " + discount;
+// }
+
+// console.log(billCalculator(500, 300, 400));
+
+// // Answer-03:-
+
+// function performanceReport(student, m1, m2, m3) {
+//     let total = m1 + m2 + m3;
+//     let average = total / 3;
+//     let remark = average >= 80 ? "Excellent" : "Keep Improving";
+
+//     return "Name: " + student +
+//            ", Total: " + total +
+//            ", Average: " + average +
+//            ", Remark: " + remark;
+// }
+
+// console.log(performanceReport("Aarav", 90, 85, 95));
+
+// // Answer-04:-
+
+// It keeps related tasks together, reduces code repetition, and makes the program easier to understand and manage.
+
+// // Answer-05:-
+
+// Combining parameters, return, and conditions makes code reusable, organized, and easy to maintain
+
+
+// // Section 10: Nested Functions
+
+// // Answer-01:-
+
+// function mainTask() {
+//     function helperTask() {
+//         return "Task completed successfully";
+//     }
+
+//     return helperTask();
+// }
+
+// console.log(mainTask());
+
+// // Answer-02:-
+
+// function calculateFinal(m1, m2) {
+//     function getTotal() {
+//         return m1 + m2;
+//     }
+
+//     return "Final marks = " + getTotal();
+// }
+
+// console.log(calculateFinal(80, 90));
+
+// // Answer-03:-
+
+// function studentStatus(name, marks) {
+//     function getGrade() {
+//         if (marks >= 80) {
+//             return "A";
+//         } else if (marks >= 60) {
+//             return "B";
+//         } else {
+//             return "C";
+//         }
+//     }
+
+//     return name + " got grade " + getGrade();
+// }
+
+// console.log(studentStatus("Aarav", 85));
+
+// // Answer-04:-
+
+// 4. Answer: Nested functions help organize code and keep helper functions private. We use them when a small task is needed only inside another function.
+
+// // Answer-05:-
+
+// Yes, an inner function can access variables of the outer function. But the outer function cannot directly access variables declared inside the inner function because of local scope.
