@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* COMMON CSS */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background-color: #000;
+        color: white;
+        overflow: hidden;
+    }
+
+
+    /* LEFT SIDEBAR */
+
+    .sidebar {
+        width: 277px;
+        height: calc(100vh - 156px);
+        background-color: #000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 20px 9px;
+        z-index: 5;
+    }
+
+    .spotify-logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 18px 28px;
+    }
+
+    .spotify-logo h2 {
+        font-size: 28px;
+        letter-spacing: -1px;
+    }
+
+    .spotify-icon {
+        width: 44px;
+        height: 44px;
+        background-color: white;
+        color: black;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 35px;
+        font-weight: bold;
+        transform: rotate(-15deg);
+    }
+
+
+    /* SIDEBAR MENU */
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .menu-item {
+        height: 46px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 0 18px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .menu-item span {
+        font-size: 28px;
+        width: 25px;
+    }
+
+    .menu-item h4 {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .menu-item.active {
+        background-color: #282828;
+    }
+
+    .menu-item:hover {
+        background-color: #242424;
+    }
+
+
+    /* PLAYLIST MENU */
+
+    .playlist-menu {
+        margin-top: 28px;
+    }
+
+    .create-icon {
+        background-color: white;
+        color: black;
+        width: 27px !important;
+        height: 27px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .liked-icon {
+        background: linear-gradient(135deg, #5635ff, #a8c8ff);
+        color: white;
+        width: 27px !important;
+        height: 27px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px !important;
+    }
+
+    .episode-icon {
+        background-color: #006b4a;
+        color: #1ed760;
+        width: 27px !important;
+        height: 27px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        font-size: 20px !important;
+    }
+
+
+    /* PLAYLIST NAMES */
+
+    .playlist-list {
+        margin-top: 28px;
+        padding: 0 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+    }
+
+    .playlist-list h4 {
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+
+    /* INSTALL APP */
+
+    .install-app {
+        position: absolute;
+        bottom: 12px;
+        left: 27px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        cursor: pointer;
+    }
+
+    .install-app span {
+        font-size: 27px;
+    }
+
+    .install-app h4 {
+        font-size: 16px;
+    }
+
+
+    /* MAIN CONTENT */
+
+    .main-content {
+        margin-left: 277px;
+        height: calc(100vh - 156px);
+        overflow-y: auto;
+        background: linear-gradient(to bottom, #222222, #121212 65%);
+        padding-bottom: 30px;
+    }
+
+
+    /* TOP HEADER */
+
+    .top-header {
+        height: 75px;
+        padding: 0 37px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navigation {
+        display: flex;
+        gap: 18px;
+    }
+
+    .navigation button {
+        height: 38px;
+        width: 38px;
+        border-radius: 50%;
+        border: none;
+        background-color: #121212;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .profile {
+        height: 40px;
+        background-color: #000;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 4px;
+        padding-right: 15px;
+    }
+
+    .profile img {
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .profile h4 {
+        font-size: 16px;
+    }
+
+    .profile span {
+        font-size: 20px;
+        margin-left: 8px;
+    }
+
+
+    /* HOME SECTION */
+
+    .home-section {
+        padding: 30px 37px;
+    }
+
+    .home-section>h1 {
+        font-size: 34px;
+        margin-bottom: 27px;
+    }
+
+
+    /* PLAYLIST CARDS */
+
+    .playlist-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px 27px;
+    }
+
+    .playlist-card {
+        width: calc((100% - 81px) / 4);
+        min-width: 220px;
+        height: 93px;
+        background-color: #303030;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .playlist-card:hover {
+        background-color: #414141;
+    }
+
+    .playlist-card img {
+        width: 93px;
+        height: 93px;
+        object-fit: cover;
+    }
+
+    .playlist-card h3 {
+        font-size: 18px;
+        padding-right: 8px;
+    }
+
+    .liked-cover {
+        width: 93px;
+        height: 93px;
+        min-width: 93px;
+        background: linear-gradient(135deg, #4b00ed, #a6d9df);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+    }
+
+
+    /* SHOWS SECTION */
+
+    .shows-section {
+        margin-top: 45px;
+    }
+
+    .section-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .section-heading a {
+        color: #b3b3b3;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+
+    /* SHOW CARDS */
+
+    .show-cards {
+        display: flex;
+        gap: 27px;
+        overflow-x: auto;
+        padding-bottom: 20px;
+    }
+
+    .show-cards::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .show-cards::-webkit-scrollbar-thumb {
+        background-color: #555;
+    }
+
+    .show-card {
+        min-width: 212px;
+        width: 212px;
+        height: 270px;
+        background-color: #181818;
+        padding: 18px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .show-card:hover {
+        background-color: #282828;
+    }
+
+    .show-card img {
+        width: 100%;
+        height: 175px;
+        object-fit: cover;
+        border-radius: 13px;
+    }
+
+    .show-card h3 {
+        font-size: 18px;
+        margin-top: 22px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .show-card p {
+        color: #a7a7a7;
+        font-size: 14px;
+        margin-top: 7px;
+    }
+
+
+    /* BOTTOM MUSIC PLAYER */
+
+    .music-player {
+        width: 100%;
+        height: 104px;
+        position: fixed;
+        bottom: 28px;
+        left: 0;
+        background-color: #181818;
+        border-top: 1px solid #282828;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 18px;
+        z-index: 10;
+    }
+
+
+    /* SONG DETAILS */
+
+    .song-details {
+        width: 25%;
+        display: flex;
+        align-items: center;
+        gap: 17px;
+    }
+
+    .song-details img {
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+    }
+
+    .song-details h4 {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+
+    .song-details p {
+        font-size: 12px;
+        color: #b3b3b3;
+    }
+
+    .heart {
+        color: #1ed760;
+        font-size: 22px;
+        margin-left: 5px;
+    }
+
+
+    /* PLAYER CENTER */
+
+    .player-center {
+        width: 38%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 13px;
+    }
+
+    .player-buttons {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .player-buttons span {
+        font-size: 17px;
+        color: #b3b3b3;
+        cursor: pointer;
+    }
+
+    .play-button {
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        color: black;
+        border: none;
+        border-radius: 50%;
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+    .progress-area {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .progress-area span {
+        font-size: 12px;
+        color: #b3b3b3;
+    }
+
+    .progress-bar {
+        height: 4px;
+        background-color: #555;
+        flex: 1;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .progress {
+        height: 100%;
+        width: 81%;
+        background-color: #b3b3b3;
+        border-radius: 10px;
+    }
+
+
+    /* PLAYER RIGHT OPTIONS */
+
+    .player-options {
+        width: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 18px;
+    }
+
+    .player-options span {
+        color: #b3b3b3;
+        font-size: 18px;
+    }
+
+    .player-options .device {
+        color: #1ed760;
+    }
+
+    .volume-bar {
+        width: 105px;
+        height: 4px;
+        background-color: #555;
+        border-radius: 10px;
+    }
+
+    .volume-bar div {
+        width: 65%;
+        height: 100%;
+        background-color: #b3b3b3;
+        border-radius: 10px;
+    }
+
+
+    /* GREEN STATUS BAR */
+
+    .status-bar {
+        width: 100%;
+        height: 28px;
+        background-color: #1ed760;
+        color: black;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 11;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 45px;
+    }
+
+    .status-bar span {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+
+    /* RESPONSIVE DESIGN */
+
+    @media screen and (max-width: 1000px) {
+
+        .sidebar {
+            width: 220px;
+        }
+
+        .main-content {
+            margin-left: 220px;
+        }
+
+        .playlist-card {
+            width: calc(50% - 14px);
+        }
+
+        .player-options {
+            gap: 8px;
+        }
+
+        .volume-bar {
+            width: 55px;
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+
+        .sidebar {
+            width: 75px;
+            padding: 15px 8px;
+        }
+
+        .spotify-logo {
+            padding: 8px;
+        }
+
+        .spotify-logo h2,
+        .menu-item h4,
+        .playlist-list,
+        .install-app h4 {
+            display: none;
+        }
+
+        .menu-item {
+            justify-content: center;
+            padding: 0;
+        }
+
+        .main-content {
+            margin-left: 75px;
+        }
+
+        .home-section {
+            padding: 25px 15px;
+        }
+
+        .playlist-card {
+            width: 100%;
+        }
+
+        .show-cards {
+            gap: 12px;
+        }
+
+        .music-player {
+            padding: 0 8px;
+        }
+
+        .song-details {
+            width: 35%;
+            gap: 7px;
+        }
+
+        .song-details img {
+            width: 42px;
+            height: 42px;
+        }
+
+        .song-details .heart,
+        .player-options {
+            display: none;
+        }
+
+        .player-center {
+            width: 60%;
+        }
+
+        .player-buttons {
+            gap: 12px;
+        }
+
+    }
+</style>
+
+<body>
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="spotify-logo">
+            <span class="spotify-icon">≋</span>
+            <h2>Spotify</h2>
+        </div>
+
+        <!-- MAIN MENU -->
+        <div class="menu">
+
+            <div class="menu-item active">
+                <span>⌂</span>
+                <h4>Home</h4>
+            </div>
+
+            <div class="menu-item">
+                <span>⌕</span>
+                <h4>Search</h4>
+            </div>
+
+            <div class="menu-item">
+                <span>▥</span>
+                <h4>Your Library</h4>
+            </div>
+
+        </div>
+
+        <!-- PLAYLIST MENU -->
+        <div class="playlist-menu">
+
+            <div class="menu-item">
+                <span class="create-icon">+</span>
+                <h4>Create Playlist</h4>
+            </div>
+
+            <div class="menu-item">
+                <span class="liked-icon">♥</span>
+                <h4>Liked Songs</h4>
+            </div>
+
+            <div class="menu-item">
+                <span class="episode-icon">◉</span>
+                <h4>Your Episodes</h4>
+            </div>
+
+        </div>
+
+        <!-- PLAYLISTS -->
+        <div class="playlist-list">
+
+            <h4>FAV</h4>
+            <h4>Daily Mix 1</h4>
+            <h4>Discover Weekly</h4>
+            <h4>Malayalam</h4>
+            <h4>Dance / Electronix Mix</h4>
+            <h4>EDM / Popular</h4>
+
+        </div>
+
+        <!-- INSTALL APP -->
+        <div class="install-app">
+            <span>⊙</span>
+            <h4>Install App</h4>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOP HEADER -->
+        <header class="top-header">
+
+            <div class="navigation">
+                <button>‹</button>
+                <button>›</button>
+            </div>
+
+            <div class="profile">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" alt="Profile">
+                <h4>Angel</h4>
+                <span>⌄</span>
+            </div>
+
+        </header>
+
+
+        <!-- HOME CONTENT -->
+        <section class="home-section">
+
+            <h1>Good morning</h1>
+
+            <!-- PLAYLIST CARDS -->
+            <div class="playlist-cards">
+
+                <div class="playlist-card">
+
+                    <div class="liked-cover">
+                        ♥
+                    </div>
+
+                    <h3>Liked Songs</h3>
+
+                </div>
+
+
+                <div class="playlist-card">
+
+                    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=300" alt="Neffex Playlist">
+
+                    <h3>Neffex Playlist</h3>
+
+                </div>
+
+
+                <div class="playlist-card">
+
+                    <img src="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?w=300" alt="KDA">
+
+                    <h3>K/ DA</h3>
+
+                </div>
+
+
+                <div class="playlist-card">
+
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300" alt="Liked Songs">
+
+                    <h3>Liked Songs</h3>
+
+                </div>
+
+
+                <div class="playlist-card">
+
+                    <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=300" alt="Dance Mix">
+
+                    <h3>Dance / Electronic Mix</h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- SHOWS SECTION -->
+            <div class="shows-section">
+
+                <div class="section-heading">
+                    <h2>Shows you might like</h2>
+                    <a href="#">SEE ALL</a>
+                </div>
+
+
+                <div class="show-cards">
+
+                    <!-- SHOW 1 -->
+                    <div class="show-card">
+
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400"
+                            alt="Weekly Motivation">
+
+                        <h3>Weekly Motivatio...</h3>
+                        <p>Ben Leo Scott</p>
+
+                    </div>
+
+
+                    <!-- SHOW 2 -->
+                    <div class="show-card">
+
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400" alt="Meditation">
+
+                        <h3>MEDITATION SELF</h3>
+                        <p>Ibn Hussein Aleem</p>
+
+                    </div>
+
+
+                    <!-- SHOW 3 -->
+                    <div class="show-card">
+
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="Words">
+
+                        <h3>Words beyond act...</h3>
+                        <p>Samuel Scott</p>
+
+                    </div>
+
+
+                    <!-- SHOW 4 -->
+                    <div class="show-card">
+
+                        <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400" alt="Alexa Show">
+
+                        <h3>The Alexa Show</h3>
+                        <p>Adriana Tom</p>
+
+                    </div>
+
+
+                    <!-- SHOW 5 -->
+                    <div class="show-card">
+
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400" alt="Stories">
+
+                        <h3>The Stories of Ma...</h3>
+                        <p>Lewis</p>
+
+                    </div>
+
+
+                    <!-- SHOW 6 -->
+                    <div class="show-card">
+
+                        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400" alt="Motivation">
+
+                        <h3>Motivation Daily b...</h3>
+                        <p>Georgina Martha</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- BOTTOM MUSIC PLAYER -->
+    <footer class="music-player">
+
+        <!-- LEFT SONG DETAILS -->
+        <div class="song-details">
+
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=200" alt="Song">
+
+            <div>
+                <h4>Dreaming On</h4>
+                <p>NEFFEX</p>
+            </div>
+
+            <span class="heart">♥</span>
+
+        </div>
+
+
+        <!-- CENTER PLAYER -->
+        <div class="player-center">
+
+            <div class="player-buttons">
+                <span>⤨</span>
+                <span>◀◀</span>
+                <button class="play-button">▶</button>
+                <span>▶▶</span>
+                <span>⟳</span>
+            </div>
+
+            <div class="progress-area">
+
+                <span>2:11</span>
+
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+
+                <span>2:42</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT PLAYER OPTIONS -->
+        <div class="player-options">
+
+            <span>♧</span>
+            <span>☷</span>
+            <span class="device">▣</span>
+            <span>🔊</span>
+
+            <div class="volume-bar">
+                <div></div>
+            </div>
+
+            <span>⛶</span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- BOTTOM GREEN STATUS BAR -->
+    <div class="status-bar">
+        <span>♬ Listening on ASUS-ROG-G531GT</span>
+    </div>
+
+</body>
+
+</html>
